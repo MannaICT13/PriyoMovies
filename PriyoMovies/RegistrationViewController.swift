@@ -29,8 +29,9 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
         utilityViewManager()
         setUpImage()
+        tapRecognizer()
 
-       
+    
     }
     
     
@@ -49,7 +50,8 @@ extension RegistrationViewController {
     
     private func utilityViewManager(){
         
-        userImageView.image = UIImage(named: "plus.png")?.roundedImage
+        userImageView.image = UIImage(named: "plus.png")
+        userImageView.roundImage(image: userImageView)
         nameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.red)
         userNameImg.image = UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.red)
         passwordImg.image = UIImage(systemName: "lock.fill")?.withRenderingMode(.alwaysOriginal).withTintColor(.red)
@@ -68,6 +70,41 @@ extension RegistrationViewController {
     }
     
     
+    
+    
+    
+    
+}
+
+extension RegistrationViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
+    private func tapRecognizer(){
+        
+        
+        let tabGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(_ : )))
+        userImageView.isUserInteractionEnabled  = true
+        userImageView.addGestureRecognizer(tabGesture)
+        
+    }
+    @objc func imageTapped(_ sender : UITapGestureRecognizer ){
+        
+        
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = .photoLibrary
+        self.present(imagePickerController, animated: true, completion: nil)
+        
+        
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+        userImageView.image = info[.originalImage] as? UIImage
+        self.dismiss(animated: true, completion: nil)
+        
+        
+        
+        
+    }
     
     
     

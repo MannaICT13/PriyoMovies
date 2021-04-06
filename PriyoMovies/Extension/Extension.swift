@@ -8,19 +8,15 @@
 import Foundation
 import UIKit
 
-extension UIImage{
-    var roundedImage : UIImage {
+extension UIImageView{
+    
+    func roundImage( image : UIImageView){
         
-        let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: self.size)
+        image.layer.cornerRadius = image.frame.width/2
+        image.layer.borderWidth = 3.0
+        image.layer.borderColor = UIColor.red.cgColor
+        image.clipsToBounds = true
         
-        UIGraphicsBeginImageContextWithOptions(self.size, false, 1)
-        UIBezierPath(
-        roundedRect: rect, cornerRadius: 50
-            
-        ).addClip()
-        self.draw(in: rect)
-        
-        return UIGraphicsGetImageFromCurrentImageContext()!
     }
     
     

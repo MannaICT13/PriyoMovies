@@ -23,6 +23,7 @@
 		2A314EB6261CF55400FFD92E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EB5261CF55400FFD92E /* UserViewModel.swift */; };
 		2A314EBB261CF8D800FFD92E /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */; };
 		2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */; };
+		2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC4261D100E00FFD92E /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		2A314EB5261CF55400FFD92E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
 		2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
+		2A314EC4261D100E00FFD92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				2A314E8C261C82C400FFD92E /* LoginViewController.swift */,
 				2A314E96261C984200FFD92E /* RegistrationViewController.swift */,
+				2A314EC4261D100E00FFD92E /* TabBarController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
 				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,
+				2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */,
 				2A314EB6261CF55400FFD92E /* UserViewModel.swift in Sources */,
 				2A314E97261C984200FFD92E /* RegistrationViewController.swift in Sources */,
 			);

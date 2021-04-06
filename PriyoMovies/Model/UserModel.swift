@@ -9,12 +9,12 @@ import UIKit
 
 class UserModel: NSObject {
     
-    let img : Data
+    let img : String
     let name : String
     let userName : String
     let password : String
     
-     init(img:Data,name:String,userName : String,password:String) {
+     init(img:String,name:String,userName : String,password:String) {
         self.img = img
         self.name = name
         self.userName = userName

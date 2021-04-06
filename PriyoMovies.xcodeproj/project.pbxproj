@@ -16,6 +16,8 @@
 		2A314E6C261C808400FFD92E /* PriyoMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E6B261C808400FFD92E /* PriyoMoviesUITests.swift */; };
 		2A314E8D261C82C400FFD92E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E8C261C82C400FFD92E /* LoginViewController.swift */; };
 		2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E91261C874E00FFD92E /* UtilityView.swift */; };
+		2A314E97261C984200FFD92E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E96261C984200FFD92E /* RegistrationViewController.swift */; };
+		2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E9B261C9E6400FFD92E /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		2A314E6D261C808400FFD92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A314E8C261C82C400FFD92E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2A314E91261C874E00FFD92E /* UtilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityView.swift; sourceTree = "<group>"; };
+		2A314E96261C984200FFD92E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		2A314E9B261C9E6400FFD92E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,7 @@
 		2A314E86261C821F00FFD92E /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				2A314E9B261C9E6400FFD92E /* Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				2A314E8C261C82C400FFD92E /* LoginViewController.swift */,
+				2A314E96261C984200FFD92E /* RegistrationViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,7 +326,9 @@
 				2A314E8D261C82C400FFD92E /* LoginViewController.swift in Sources */,
 				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
+				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,
+				2A314E97261C984200FFD92E /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

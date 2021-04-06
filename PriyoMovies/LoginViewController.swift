@@ -38,6 +38,11 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func registrationBtnAction(_ sender: Any) {
+        
+        let registerVC = self.storyboard?.instantiateViewController(identifier: "RegistrationViewController") as! RegistrationViewController
+        self.navigationController?.pushViewController(registerVC, animated: true)
+        
+        
     }
     
     

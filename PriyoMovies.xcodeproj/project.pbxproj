@@ -18,6 +18,8 @@
 		2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E91261C874E00FFD92E /* UtilityView.swift */; };
 		2A314E97261C984200FFD92E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E96261C984200FFD92E /* RegistrationViewController.swift */; };
 		2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E9B261C9E6400FFD92E /* Extension.swift */; };
+		2A314EA9261CE08200FFD92E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EA8261CE08200FFD92E /* UserService.swift */; };
+		2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EB0261CE09B00FFD92E /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		2A314E91261C874E00FFD92E /* UtilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UtilityView.swift; sourceTree = "<group>"; };
 		2A314E96261C984200FFD92E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		2A314E9B261C9E6400FFD92E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2A314EA8261CE08200FFD92E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		2A314EB0261CE09B00FFD92E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				2A314E89261C826C00FFD92E /* ViewModel */,
 				2A314E88261C825400FFD92E /* Controller */,
 				2A314E87261C824100FFD92E /* Storyboard */,
+				2A314EA7261CE03400FFD92E /* Service */,
 				2A314E86261C821F00FFD92E /* Extension */,
 				2A314E85261C81F900FFD92E /* StringConstant */,
 				2A314E49261C808200FFD92E /* AppDelegate.swift */,
@@ -189,8 +194,17 @@
 		2A314E8B261C828100FFD92E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2A314EB0261CE09B00FFD92E /* UserModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2A314EA7261CE03400FFD92E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2A314EA8261CE08200FFD92E /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,7 +337,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A314EA9261CE08200FFD92E /* UserService.swift in Sources */,
 				2A314E8D261C82C400FFD92E /* LoginViewController.swift in Sources */,
+				2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */,
 				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
 				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,

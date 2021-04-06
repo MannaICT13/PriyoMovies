@@ -43,8 +43,8 @@ class RegistrationViewController: UIViewController {
         guard let userName = userNameTextField.text else {return}
         guard let password = passwordTextField.text else {return}
        
-        let image = userImageView.image
-        guard  let imageData : NSData = image!.pngData() as NSData? else{return}
+        let image = userImageView.image 
+        let imageData : NSData = image!.pngData()! as NSData
         let imageStr = imageData.base64EncodedData(options: .lineLength64Characters)
         
         if   UserService.shareInstance.registerUser(name: name, userName: userName, password: password, img: imageStr.base64EncodedString(options: .lineLength64Characters)) == true{

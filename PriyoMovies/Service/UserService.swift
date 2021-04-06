@@ -74,6 +74,39 @@ class UserService: NSObject {
         
     }
     
+    func userLogin(userName:String,password:String,complition:([UserLoginModel]?)->()){
+        
+        var loginStat :OpaquePointer?
+        
+        
+        let userName = userName as NSString
+        let password = password as NSString
+        
+        let loginQuery = "SELECT * FROM LifePlusBD WHERE userName = '\(userName)' AND password = '\(password)';"
+        
+        var userLoginData = [UserLoginModel]()
+        if sqlite3_prepare_v2(db, loginQuery, -1, &loginStat, nil) == SQLITE_OK{
+            
+            if sqlite3_step(loginStat) == SQLITE_ROW{
+                
+                let userNameString = sqlite3_column_text(loginStat, 1)
+                let passwordString = sqlite3_column_text(loginStat, 2)
+                let userName = String(cString: userNameString!)
+                let password = String(cString: passwordString!)
+                
+            userLoginData.append(UserLoginModel(userName: userName, password: password))
+               
+            }else{
+               return
+            }
+        }else{
+            return
+        }
+        
+        complition(userLoginData)
+        sqlite3_finalize(loginStat)
+        
+    }
     
 
     

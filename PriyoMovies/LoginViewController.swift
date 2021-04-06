@@ -35,6 +35,15 @@ class LoginViewController: UIViewController {
     //MARK:- Handlers
 
     @IBAction func logingBtnAction(_ sender: Any) {
+        
+        guard let userName = userNameTextField.text else{return }
+        guard let password = passwordTextField.text else {return }
+        
+//        UserService.shareInstance.userLogin(userName: userName, password: password) { (loginUser) in
+//
+//
+//        }
+        
     }
     
     @IBAction func registrationBtnAction(_ sender: Any) {

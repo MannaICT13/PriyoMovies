@@ -74,15 +74,16 @@ class UserService: NSObject {
         
     }
     
-    func userLogin(userName:String,password:String,complition:([UserLoginModel]?)->()){
+    func userLogin(userName:String,password:String,complition:([UserLoginModel]?)->())-> Bool {
         
         var loginStat :OpaquePointer?
         
         
         let userName = userName as NSString
         let password = password as NSString
+        var isFail = Bool()
         
-        let loginQuery = "SELECT * FROM LifePlusBD WHERE userName = '\(userName)' AND password = '\(password)';"
+        let loginQuery = "SELECT * FROM PriyoMovie WHERE userName = '\(userName)' AND password = '\(password)';"
         
         var userLoginData = [UserLoginModel]()
         if sqlite3_prepare_v2(db, loginQuery, -1, &loginStat, nil) == SQLITE_OK{
@@ -96,15 +97,18 @@ class UserService: NSObject {
                 
             userLoginData.append(UserLoginModel(userName: userName, password: password))
                
+                isFail = true
             }else{
-               return
+              isFail = false
             }
         }else{
-            return
+            
+            isFail = false
         }
         
         complition(userLoginData)
-        sqlite3_finalize(loginStat)
+        return isFail
+       
         
     }
     

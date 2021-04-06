@@ -23,6 +23,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registrationBtnOutlet: UIButton!
     
     
+    
+    var userLoginVM = [UserLoginViewModel]()
+    
     //MARK:- Init
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +42,19 @@ class LoginViewController: UIViewController {
         guard let userName = userNameTextField.text else{return }
         guard let password = passwordTextField.text else {return }
         
-//        UserService.shareInstance.userLogin(userName: userName, password: password) { (loginUser) in
-//
-//
-//        }
+        if  UserService.shareInstance.userLogin(userName: userName, password: password, complition: { (login) in
+            
+        self.userLoginVM = login?.map({return UserLoginViewModel(userLogin: $0)}) ?? []
+            
+        }) == true{
+            if (userName == userLoginVM[0].userName &&  password == userLoginVM[0].password ){
+                print("Success")
+        }
+      
+      
+        }else{
+            print("Faild")
+        }
         
     }
     

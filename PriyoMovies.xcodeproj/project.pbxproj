@@ -22,6 +22,7 @@
 		2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EB0261CE09B00FFD92E /* UserModel.swift */; };
 		2A314EB6261CF55400FFD92E /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EB5261CF55400FFD92E /* UserViewModel.swift */; };
 		2A314EBB261CF8D800FFD92E /* UserLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */; };
+		2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		2A314EB0261CE09B00FFD92E /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2A314EB5261CF55400FFD92E /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginModel.swift; sourceTree = "<group>"; };
+		2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				2A314EB5261CF55400FFD92E /* UserViewModel.swift */,
+				2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A314EBB261CF8D800FFD92E /* UserLoginModel.swift in Sources */,
+				2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */,
 				2A314EA9261CE08200FFD92E /* UserService.swift in Sources */,
 				2A314E8D261C82C400FFD92E /* LoginViewController.swift in Sources */,
 				2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */,

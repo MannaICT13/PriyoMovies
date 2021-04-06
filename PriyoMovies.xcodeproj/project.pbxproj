@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E49261C808200FFD92E /* AppDelegate.swift */; };
+		2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E4B261C808200FFD92E /* SceneDelegate.swift */; };
+		2A314E4E261C808200FFD92E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E4D261C808200FFD92E /* ViewController.swift */; };
+		2A314E51261C808200FFD92E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A314E4F261C808200FFD92E /* Main.storyboard */; };
+		2A314E53261C808400FFD92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A314E52261C808400FFD92E /* Assets.xcassets */; };
+		2A314E56261C808400FFD92E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A314E54261C808400FFD92E /* LaunchScreen.storyboard */; };
+		2A314E61261C808400FFD92E /* PriyoMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E60261C808400FFD92E /* PriyoMoviesTests.swift */; };
+		2A314E6C261C808400FFD92E /* PriyoMoviesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314E6B261C808400FFD92E /* PriyoMoviesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A314E5D261C808400FFD92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A314E3E261C808200FFD92E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A314E45261C808200FFD92E;
+			remoteInfo = PriyoMovies;
+		};
+		2A314E68261C808400FFD92E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A314E3E261C808200FFD92E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A314E45261C808200FFD92E;
+			remoteInfo = PriyoMovies;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A314E46261C808200FFD92E /* PriyoMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PriyoMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A314E49261C808200FFD92E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2A314E4B261C808200FFD92E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2A314E4D261C808200FFD92E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2A314E50261C808200FFD92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2A314E52261C808400FFD92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A314E55261C808400FFD92E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2A314E57261C808400FFD92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A314E5C261C808400FFD92E /* PriyoMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PriyoMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A314E60261C808400FFD92E /* PriyoMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriyoMoviesTests.swift; sourceTree = "<group>"; };
+		2A314E62261C808400FFD92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A314E67261C808400FFD92E /* PriyoMoviesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PriyoMoviesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A314E6B261C808400FFD92E /* PriyoMoviesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriyoMoviesUITests.swift; sourceTree = "<group>"; };
+		2A314E6D261C808400FFD92E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A314E43261C808200FFD92E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E59261C808400FFD92E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E64261C808400FFD92E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A314E3D261C808200FFD92E = {
+			isa = PBXGroup;
+			children = (
+				2A314E48261C808200FFD92E /* PriyoMovies */,
+				2A314E5F261C808400FFD92E /* PriyoMoviesTests */,
+				2A314E6A261C808400FFD92E /* PriyoMoviesUITests */,
+				2A314E47261C808200FFD92E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A314E47261C808200FFD92E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A314E46261C808200FFD92E /* PriyoMovies.app */,
+				2A314E5C261C808400FFD92E /* PriyoMoviesTests.xctest */,
+				2A314E67261C808400FFD92E /* PriyoMoviesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A314E48261C808200FFD92E /* PriyoMovies */ = {
+			isa = PBXGroup;
+			children = (
+				2A314E49261C808200FFD92E /* AppDelegate.swift */,
+				2A314E4B261C808200FFD92E /* SceneDelegate.swift */,
+				2A314E4D261C808200FFD92E /* ViewController.swift */,
+				2A314E4F261C808200FFD92E /* Main.storyboard */,
+				2A314E52261C808400FFD92E /* Assets.xcassets */,
+				2A314E54261C808400FFD92E /* LaunchScreen.storyboard */,
+				2A314E57261C808400FFD92E /* Info.plist */,
+			);
+			path = PriyoMovies;
+			sourceTree = "<group>";
+		};
+		2A314E5F261C808400FFD92E /* PriyoMoviesTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A314E60261C808400FFD92E /* PriyoMoviesTests.swift */,
+				2A314E62261C808400FFD92E /* Info.plist */,
+			);
+			path = PriyoMoviesTests;
+			sourceTree = "<group>";
+		};
+		2A314E6A261C808400FFD92E /* PriyoMoviesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2A314E6B261C808400FFD92E /* PriyoMoviesUITests.swift */,
+				2A314E6D261C808400FFD92E /* Info.plist */,
+			);
+			path = PriyoMoviesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2A314E45261C808200FFD92E /* PriyoMovies */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A314E70261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMovies" */;
+			buildPhases = (
+				2A314E42261C808200FFD92E /* Sources */,
+				2A314E43261C808200FFD92E /* Frameworks */,
+				2A314E44261C808200FFD92E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PriyoMovies;
+			productName = PriyoMovies;
+			productReference = 2A314E46261C808200FFD92E /* PriyoMovies.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2A314E5B261C808400FFD92E /* PriyoMoviesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A314E73261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMoviesTests" */;
+			buildPhases = (
+				2A314E58261C808400FFD92E /* Sources */,
+				2A314E59261C808400FFD92E /* Frameworks */,
+				2A314E5A261C808400FFD92E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A314E5E261C808400FFD92E /* PBXTargetDependency */,
+			);
+			name = PriyoMoviesTests;
+			productName = PriyoMoviesTests;
+			productReference = 2A314E5C261C808400FFD92E /* PriyoMoviesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2A314E66261C808400FFD92E /* PriyoMoviesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A314E76261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMoviesUITests" */;
+			buildPhases = (
+				2A314E63261C808400FFD92E /* Sources */,
+				2A314E64261C808400FFD92E /* Frameworks */,
+				2A314E65261C808400FFD92E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A314E69261C808400FFD92E /* PBXTargetDependency */,
+			);
+			name = PriyoMoviesUITests;
+			productName = PriyoMoviesUITests;
+			productReference = 2A314E67261C808400FFD92E /* PriyoMoviesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A314E3E261C808200FFD92E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					2A314E45261C808200FFD92E = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					2A314E5B261C808400FFD92E = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2A314E45261C808200FFD92E;
+					};
+					2A314E66261C808400FFD92E = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 2A314E45261C808200FFD92E;
+					};
+				};
+			};
+			buildConfigurationList = 2A314E41261C808200FFD92E /* Build configuration list for PBXProject "PriyoMovies" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2A314E3D261C808200FFD92E;
+			productRefGroup = 2A314E47261C808200FFD92E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A314E45261C808200FFD92E /* PriyoMovies */,
+				2A314E5B261C808400FFD92E /* PriyoMoviesTests */,
+				2A314E66261C808400FFD92E /* PriyoMoviesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A314E44261C808200FFD92E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A314E56261C808400FFD92E /* LaunchScreen.storyboard in Resources */,
+				2A314E53261C808400FFD92E /* Assets.xcassets in Resources */,
+				2A314E51261C808200FFD92E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E5A261C808400FFD92E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E65261C808400FFD92E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A314E42261C808200FFD92E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A314E4E261C808200FFD92E /* ViewController.swift in Sources */,
+				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
+				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E58261C808400FFD92E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A314E61261C808400FFD92E /* PriyoMoviesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A314E63261C808400FFD92E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A314E6C261C808400FFD92E /* PriyoMoviesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A314E5E261C808400FFD92E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A314E45261C808200FFD92E /* PriyoMovies */;
+			targetProxy = 2A314E5D261C808400FFD92E /* PBXContainerItemProxy */;
+		};
+		2A314E69261C808400FFD92E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A314E45261C808200FFD92E /* PriyoMovies */;
+			targetProxy = 2A314E68261C808400FFD92E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2A314E4F261C808200FFD92E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A314E50261C808200FFD92E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2A314E54261C808400FFD92E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2A314E55261C808400FFD92E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2A314E6E261C808400FFD92E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2A314E6F261C808400FFD92E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A314E71261C808400FFD92E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMovies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMovies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A314E72261C808400FFD92E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMovies/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMovies;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2A314E74261C808400FFD92E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMoviesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriyoMovies.app/PriyoMovies";
+			};
+			name = Debug;
+		};
+		2A314E75261C808400FFD92E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMoviesTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PriyoMovies.app/PriyoMovies";
+			};
+			name = Release;
+		};
+		2A314E77261C808400FFD92E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMoviesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMoviesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PriyoMovies;
+			};
+			name = Debug;
+		};
+		2A314E78261C808400FFD92E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PriyoMoviesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ict.manna.PriyoMoviesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PriyoMovies;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A314E41261C808200FFD92E /* Build configuration list for PBXProject "PriyoMovies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A314E6E261C808400FFD92E /* Debug */,
+				2A314E6F261C808400FFD92E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A314E70261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMovies" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A314E71261C808400FFD92E /* Debug */,
+				2A314E72261C808400FFD92E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A314E73261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMoviesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A314E74261C808400FFD92E /* Debug */,
+				2A314E75261C808400FFD92E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A314E76261C808400FFD92E /* Build configuration list for PBXNativeTarget "PriyoMoviesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A314E77261C808400FFD92E /* Debug */,
+				2A314E78261C808400FFD92E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A314E3E261C808200FFD92E /* Project object */;
+}

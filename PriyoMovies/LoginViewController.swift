@@ -50,6 +50,8 @@ class LoginViewController: UIViewController {
             if (userName == userLoginVM[0].userName &&  password == userLoginVM[0].password ){
                 print("Success")
                 let tabVC = self.storyboard?.instantiateViewController(identifier: "TabBarController") as! TabBarController
+            
+                tabVC.userName = userName
                 self.navigationController?.pushViewController(tabVC, animated: true)
         }
       

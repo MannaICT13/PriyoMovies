@@ -38,7 +38,7 @@ class UserService: NSObject {
         
         var tableCreateStat : OpaquePointer?
         
-        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS PriyoMovie(name VARCHAR(100),userName VARCHAR(100) PRIMARY KEY NOT NULL,password VARCHAR(100) NOT NULL,img VARCHAR(200));"
+        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS PriyoMovie(name VARCHAR(100),userName VARCHAR(100) PRIMARY KEY,password VARCHAR(100) NOT NULL,img VARCHAR(200));"
         
         if sqlite3_prepare_v2(db, tableCreateQuery, -1, &tableCreateStat, nil) == SQLITE_OK{
             
@@ -109,6 +109,52 @@ class UserService: NSObject {
         complition(userLoginData)
         return isFail
        
+        
+    }
+    
+    
+    func getUserData(userName : String,completion: @escaping ([UserModel])->()){
+        
+        
+        var userData = [UserModel]()
+        var getStat : OpaquePointer?
+        let userName = userName as NSString
+        let selectQuery = "SELECT * FROM PriyoMovie WHERE userName = '\(userName)';"
+        
+        if sqlite3_prepare_v2(db, selectQuery, -1, &getStat, nil) == SQLITE_OK{
+        
+            if sqlite3_step(getStat) == SQLITE_ROW{
+                
+                let name = sqlite3_column_text(getStat, 0)
+                let userName = sqlite3_column_text(getStat, 1)
+                let password = sqlite3_column_text(getStat, 2)
+                let img = sqlite3_column_text(getStat, 3)
+                
+                
+                let nameStr = String(cString: name!)
+                let userNameStr = String(cString: userName!)
+                let passwordStr = String(cString: password!)
+                let imgStr = String(cString: img!)
+                
+                userData.append(UserModel(img: imgStr, name: nameStr, userName: userNameStr, password: passwordStr))
+                
+                
+              
+            }else{
+                return
+                
+            }
+            
+            
+            
+        }else{
+            
+            return
+        }
+        
+        completion(userData)
+        
+        
         
     }
     

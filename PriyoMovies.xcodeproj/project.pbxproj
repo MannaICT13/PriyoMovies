@@ -30,6 +30,7 @@
 		2A5B3F12261E001E001E3169 /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */; };
 		2A5B3F18261E32DD001E3169 /* PopularMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F17261E32DD001E3169 /* PopularMovieModel.swift */; };
 		2A5B3F1D261E38D4001E3169 /* PopularMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F1C261E38D4001E3169 /* PopularMovieViewModel.swift */; };
+		2A5B3F28261E687C001E3169 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A5B3F17261E32DD001E3169 /* PopularMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieModel.swift; sourceTree = "<group>"; };
 		2A5B3F1C261E38D4001E3169 /* PopularMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewModel.swift; sourceTree = "<group>"; };
+		2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				2A314EC4261D100E00FFD92E /* TabBarController.swift */,
 				2A314EC9261D28D100FFD92E /* ProfileViewController.swift */,
 				2A5B3F0C261DFBCC001E3169 /* PopularMovieViewController.swift */,
+				2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -380,6 +383,7 @@
 				2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,
 				2A5B3F12261E001E001E3169 /* PopularMovieCollectionViewCell.swift in Sources */,
+				2A5B3F28261E687C001E3169 /* MovieDetailViewController.swift in Sources */,
 				2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */,
 				2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */,
 				2A314EB6261CF55400FFD92E /* UserViewModel.swift in Sources */,

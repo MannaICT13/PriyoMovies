@@ -70,6 +70,33 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
         
         return cell
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let DetailVC = self.storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as! MovieDetailViewController
+        
+        DetailVC.titleStr = popularMVM[indexPath.row].title
+        DetailVC.ratingStr = "\(popularMVM[indexPath.row].rating)"
+        DetailVC.dateStr = popularMVM[indexPath.row].releaseDate
+        DetailVC.summaryStr = popularMVM[indexPath.row].summary
+        
+        let cover = popularMVM[indexPath.row].coverPhoto
+        
+        if let coverImg = getImage(from: cover){
+            DetailVC.coverImage = coverImg
+        }
+        
+        let poster = popularMVM[indexPath.row].poster
+        if let posterImg = getImage(from: poster){
+            DetailVC.posterImage = posterImg
+        }
+        
+        
+    
+        self.navigationController?.pushViewController(DetailVC, animated: true)
+        
+        
+        
+    }
 
     
 }

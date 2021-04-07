@@ -25,6 +25,7 @@
 		2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */; };
 		2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC4261D100E00FFD92E /* TabBarController.swift */; };
 		2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC9261D28D100FFD92E /* ProfileViewController.swift */; };
+		2A5B3EFE261DE869001E3169 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3EFD261DE869001E3169 /* MovieModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 		2A314EC4261D100E00FFD92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2A314EC9261D28D100FFD92E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2A5B3EFD261DE869001E3169 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			children = (
 				2A314EB0261CE09B00FFD92E /* UserModel.swift */,
 				2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */,
+				2A5B3EFD261DE869001E3169 /* MovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5B3EFE261DE869001E3169 /* MovieModel.swift in Sources */,
 				2A314EBB261CF8D800FFD92E /* UserLoginModel.swift in Sources */,
 				2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */,
 				2A314EA9261CE08200FFD92E /* UserService.swift in Sources */,

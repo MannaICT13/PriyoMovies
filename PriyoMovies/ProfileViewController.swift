@@ -49,9 +49,10 @@ class ProfileViewController: UIViewController {
          
          profileLbl.text = "Profile"
          profileImg.roundImage(image: profileImg)
+        userNameLbl.text = userVM[0].name
         // profileImg.image = UIImage(systemName: "person.fill")
        //  profileBackView.backgroundColor = UtilityView.color
-         userNameLbl.text = userVM[0].name
+      
         
         
         

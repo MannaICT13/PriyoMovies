@@ -31,6 +31,9 @@
 		2A5B3F18261E32DD001E3169 /* PopularMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F17261E32DD001E3169 /* PopularMovieModel.swift */; };
 		2A5B3F1D261E38D4001E3169 /* PopularMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F1C261E38D4001E3169 /* PopularMovieViewModel.swift */; };
 		2A5B3F28261E687C001E3169 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */; };
+		2A5B3F2D261E743A001E3169 /* SaveMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F2C261E743A001E3169 /* SaveMovieService.swift */; };
+		2A5B3F32261E744D001E3169 /* SaveMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F31261E744D001E3169 /* SaveMovieModel.swift */; };
+		2A5B3F37261E74BF001E3169 /* SaveMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F36261E74BF001E3169 /* SaveMovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,9 @@
 		2A5B3F17261E32DD001E3169 /* PopularMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieModel.swift; sourceTree = "<group>"; };
 		2A5B3F1C261E38D4001E3169 /* PopularMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewModel.swift; sourceTree = "<group>"; };
 		2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		2A5B3F2C261E743A001E3169 /* SaveMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieService.swift; sourceTree = "<group>"; };
+		2A5B3F31261E744D001E3169 /* SaveMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieModel.swift; sourceTree = "<group>"; };
+		2A5B3F36261E74BF001E3169 /* SaveMovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 				2A314EB5261CF55400FFD92E /* UserViewModel.swift */,
 				2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */,
 				2A5B3F1C261E38D4001E3169 /* PopularMovieViewModel.swift */,
+				2A5B3F36261E74BF001E3169 /* SaveMovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 				2A314EB0261CE09B00FFD92E /* UserModel.swift */,
 				2A314EBA261CF8D800FFD92E /* UserLoginModel.swift */,
 				2A5B3F17261E32DD001E3169 /* PopularMovieModel.swift */,
+				2A5B3F31261E744D001E3169 /* SaveMovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 			children = (
 				2A314EA8261CE08200FFD92E /* UserService.swift */,
 				2A5B3F02261DEDE6001E3169 /* MovieService.swift */,
+				2A5B3F2C261E743A001E3169 /* SaveMovieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -378,11 +387,14 @@
 				2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */,
 				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
+				2A5B3F37261E74BF001E3169 /* SaveMovieViewModel.swift in Sources */,
 				2A5B3F1D261E38D4001E3169 /* PopularMovieViewModel.swift in Sources */,
+				2A5B3F2D261E743A001E3169 /* SaveMovieService.swift in Sources */,
 				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,
 				2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,
 				2A5B3F12261E001E001E3169 /* PopularMovieCollectionViewCell.swift in Sources */,
+				2A5B3F32261E744D001E3169 /* SaveMovieModel.swift in Sources */,
 				2A5B3F28261E687C001E3169 /* MovieDetailViewController.swift in Sources */,
 				2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */,
 				2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */,

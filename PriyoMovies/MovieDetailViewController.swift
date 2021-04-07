@@ -29,6 +29,7 @@ class MovieDetailViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        addFavourite()
         titleLbl.text = titleStr
         ratingLbl.text = ratingStr
         dateLbl.text = dateStr
@@ -37,6 +38,20 @@ class MovieDetailViewController: UIViewController {
         posterImg.image = posterImage
 
       
+    }
+    
+    
+    func addFavourite(){
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: self, action: #selector(addToFavourite(_:)))
+        
+        
+    }
+    
+    @objc func addToFavourite(_ sender: UIBarButtonItem){
+        
+        navigationItem.rightBarButtonItem?.tintColor = .red
+        
     }
     
 

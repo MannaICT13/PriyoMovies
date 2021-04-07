@@ -445,6 +445,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="cjj-r4-PRX" id="l0H-OX-xjR"/>
+                                    <outlet property="delegate" destination="cjj-r4-PRX" id="dez-GH-lmd"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vhi-Vs-Kwl"/>

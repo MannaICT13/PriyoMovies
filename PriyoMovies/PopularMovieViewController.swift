@@ -33,25 +33,26 @@ class PopularMovieViewController: UIViewController {
 
    
 }
-//extension PopularMovieViewController : UICollectionViewDelegate,UICollectionViewDataSource{
-//
-//
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 1
-//
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//
-//        return results.count
-//
-//    }
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        let cell = self.movieCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PopularMovieCollectionViewCell
-//        cell.titleLbl.text = "results[indexPath.row].results.title"
-//        return cell
-//    }
-//
+extension PopularMovieViewController : UICollectionViewDelegate,UICollectionViewDataSource{
+
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        return popularMVM.count
+
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cell = self.movieCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PopularMovieCollectionViewCell
+      //  cell.titleLbl.text = "results[indexPath.row].results.title"
+       
+        return cell
+    }
+
     
-//}
+}

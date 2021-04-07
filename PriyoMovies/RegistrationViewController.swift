@@ -47,7 +47,7 @@ class RegistrationViewController: UIViewController {
         let imageData : NSData = image!.pngData()! as NSData
         let imageStr = imageData.base64EncodedData(options: .lineLength64Characters)
         
-        if   UserService.shareInstance.registerUser(name: name, userName: userName, password: password, img: imageStr.base64EncodedString(options: .lineLength64Characters)) == true{
+        if   UserService.shareInstance.registerUser(name: name, userName: userName, password: password, img: imageStr.base64EncodedString()) == true{
             print("SuccessFully register...")
       }else{
         return

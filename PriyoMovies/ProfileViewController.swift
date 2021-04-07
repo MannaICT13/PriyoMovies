@@ -19,19 +19,43 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileLbl: UILabel!
     
     
+    var userName = String()
+    var userVM = [UserViewModel]()
     
     //MARK:- Init
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        profileLbl.text = "Profile"
-        profileImg.roundImage(image: profileImg)
-        profileBackView.backgroundColor = UtilityView.color
-        userNameLbl.text = "Md Khaled Hasan Manna"
-
+                UserService.shareInstance.getUserData(userName: userName) { (user) in
+        
+                    self.userVM = user.map({return UserViewModel(user: $0)})
+        
+                }
+    
+ 
+        
+        
       
     }
     
     //MARK:- Handlers
+    private func profleSetUp(){
+        
+        let imgStr = userVM[0].img
+        let dataDecoded:NSData = NSData(base64Encoded: imgStr, options: NSData.Base64DecodingOptions(rawValue: 0))!
+        let data = Data(base64Encoded: dataDecoded as Data,options: .ignoreUnknownCharacters)
+        profileImg.image = UIImage(data: data!)
+        
+         
+         profileLbl.text = "Profile"
+         profileImg.roundImage(image: profileImg)
+        // profileImg.image = UIImage(systemName: "person.fill")
+       //  profileBackView.backgroundColor = UtilityView.color
+         userNameLbl.text = userVM[0].name
+        
+        
+        
+    }
     
 
  

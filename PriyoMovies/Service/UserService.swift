@@ -21,7 +21,7 @@ class UserService: NSObject {
     
     func openConnection(){
         
-        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("PriyoMovie.sqlite")
+        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("PriyoMoviess.sqlite")
         
         guard let url = fileUrl else {return}
         
@@ -38,7 +38,7 @@ class UserService: NSObject {
         
         var tableCreateStat : OpaquePointer?
         
-        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS PriyoMovie(name VARCHAR(100),userName VARCHAR(100) PRIMARY KEY,password VARCHAR(100) NOT NULL,img VARCHAR(200));"
+        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS PriyoMoviess(name VARCHAR(100),userName VARCHAR(100) PRIMARY KEY,password VARCHAR(100) NOT NULL,img TEXT);"
         
         if sqlite3_prepare_v2(db, tableCreateQuery, -1, &tableCreateStat, nil) == SQLITE_OK{
             
@@ -53,7 +53,7 @@ class UserService: NSObject {
     
     func registerUser(name : String,userName: String,password : String ,img:String)->Bool{
         var registerStat : OpaquePointer?
-        let registerQuery = "INSERT INTO PriyoMovie(name,userName,password,img) VALUES(?,?,?,?);"
+        let registerQuery = "INSERT INTO PriyoMoviess(name,userName,password,img) VALUES(?,?,?,?);"
         
         if sqlite3_prepare_v2(db, registerQuery, -1, &registerStat, nil) == SQLITE_OK{
             
@@ -83,7 +83,7 @@ class UserService: NSObject {
         let password = password as NSString
         var isFail = Bool()
         
-        let loginQuery = "SELECT * FROM PriyoMovie WHERE userName = '\(userName)' AND password = '\(password)';"
+        let loginQuery = "SELECT * FROM PriyoMoviess WHERE userName = '\(userName)' AND password = '\(password)';"
         
         var userLoginData = [UserLoginModel]()
         if sqlite3_prepare_v2(db, loginQuery, -1, &loginStat, nil) == SQLITE_OK{
@@ -119,7 +119,7 @@ class UserService: NSObject {
         var userData = [UserModel]()
         var getStat : OpaquePointer?
         let userName = userName as NSString
-        let selectQuery = "SELECT * FROM PriyoMovie WHERE userName = '\(userName)';"
+        let selectQuery = "SELECT * FROM PriyoMoviess WHERE userName = '\(userName)';"
         
         if sqlite3_prepare_v2(db, selectQuery, -1, &getStat, nil) == SQLITE_OK{
         
@@ -153,6 +153,10 @@ class UserService: NSObject {
         }
         
         completion(userData)
+        
+        
+        
+        
         
         
         

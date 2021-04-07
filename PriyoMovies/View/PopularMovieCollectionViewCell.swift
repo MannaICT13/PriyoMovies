@@ -11,12 +11,15 @@ class PopularMovieCollectionViewCell: UICollectionViewCell {
     
     //MARK:- Properties
     
-    @IBOutlet weak var posterImg: UIView!
+    @IBOutlet weak var posterImg: UIImageView!
     
     @IBOutlet weak var titleLbl: UILabel!
     
     @IBOutlet weak var ratingLbl: UILabel!
     
+    override func awakeFromNib() {
     
+        
+    }
     
 }

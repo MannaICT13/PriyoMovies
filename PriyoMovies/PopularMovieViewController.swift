@@ -12,7 +12,7 @@ class PopularMovieViewController: UIViewController {
     //MARK:- Properties
     
     var popularMVM = [PopularMovieViewModel]()
-    
+    var posterImg = UIImageView()
     @IBOutlet weak var movieCollectionView: UICollectionView!
     //MARK:- Init
     override func viewDidLoad() {
@@ -23,13 +23,17 @@ class PopularMovieViewController: UIViewController {
             self.popularMVM = results.map({return PopularMovieViewModel(result: $0)})
         }
 
+        
+       
+        
+        
        
     }
     
     //MARK:- Handlers
     
     
-    
+   
 
    
 }
@@ -48,11 +52,73 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cell = self.movieCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PopularMovieCollectionViewCell
-      //  cell.titleLbl.text = "results[indexPath.row].results.title"
-       
+        let cell: PopularMovieCollectionViewCell = self.movieCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PopularMovieCollectionViewCell
+        
+        cell.layer.cornerRadius = 10
+        cell.layer.masksToBounds = true
+        
+        cell.titleLbl.text = popularMVM[indexPath.row].title
+        cell.ratingLbl.text = "\(popularMVM[indexPath.row].rating)"
+         
+        
+        
+        let poster = popularMVM[indexPath.row].poster
+        if let image = getImage(from: poster) {
+            cell.posterImg.image = image
+        }
+        
+        
         return cell
     }
 
+    
+}
+
+extension PopularMovieViewController : UICollectionViewDelegateFlowLayout{
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = movieCollectionView.frame.width
+        let collectionViewHeight = movieCollectionView.frame.height
+        return CGSize(width: collectionViewWidth/2-3, height: collectionViewHeight/2)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    
+}
+extension PopularMovieViewController{
+    
+    func getImage(from string: String) -> UIImage? {
+        let  urlString = "https://image.tmdb.org/t/p/w300" + string
+        
+        guard let url = URL(string: urlString)
+            else {
+                print("Unable to create URL")
+                return nil
+        }
+
+        var image: UIImage? = nil
+        do {
+          
+            let data = try Data(contentsOf: url, options: [])
+
+           
+            image = UIImage(data: data)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        return image
+    }
+    
     
 }

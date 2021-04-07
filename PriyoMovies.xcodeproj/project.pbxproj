@@ -26,6 +26,8 @@
 		2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC4261D100E00FFD92E /* TabBarController.swift */; };
 		2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC9261D28D100FFD92E /* ProfileViewController.swift */; };
 		2A5B3EFE261DE869001E3169 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3EFD261DE869001E3169 /* MovieModel.swift */; };
+		2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F02261DEDE6001E3169 /* MovieService.swift */; };
+		2A5B3F08261DFA72001E3169 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F07261DFA72001E3169 /* MovieViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		2A314EC4261D100E00FFD92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2A314EC9261D28D100FFD92E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2A5B3EFD261DE869001E3169 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		2A5B3F02261DEDE6001E3169 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		2A5B3F07261DFA72001E3169 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +199,7 @@
 			children = (
 				2A314EB5261CF55400FFD92E /* UserViewModel.swift */,
 				2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */,
+				2A5B3F07261DFA72001E3169 /* MovieViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				2A314EA8261CE08200FFD92E /* UserService.swift */,
+				2A5B3F02261DEDE6001E3169 /* MovieService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -364,7 +370,9 @@
 				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
 				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,
+				2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,
+				2A5B3F08261DFA72001E3169 /* MovieViewModel.swift in Sources */,
 				2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */,
 				2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */,
 				2A314EB6261CF55400FFD92E /* UserViewModel.swift in Sources */,

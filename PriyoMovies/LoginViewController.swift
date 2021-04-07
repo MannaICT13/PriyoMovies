@@ -31,6 +31,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     utilityViewManager()
         setUpIcon()
+        
+        MovieService.sharedInstance.getPopularMovie { (results) in
+            print(results)
+        }
 
       
     }

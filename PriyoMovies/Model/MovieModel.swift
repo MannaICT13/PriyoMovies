@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct MovieModel  {
-    
+struct MovieModel:Decodable  {
+
     let results :[ResultsModel]
     
     private enum CodingKeys : String,CodingKey{
@@ -18,7 +18,7 @@ struct MovieModel  {
 }
 
 
-struct ResultsModel{
+struct ResultsModel :Decodable{
     
     let id : Int
     let coverPhoto : String

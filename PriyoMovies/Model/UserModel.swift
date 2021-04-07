@@ -20,7 +20,6 @@ class UserModel: NSObject {
         self.userName = userName
         self.password = password
     }
-    
-    
+   
 
 }

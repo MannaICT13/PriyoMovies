@@ -32,11 +32,7 @@ class LoginViewController: UIViewController {
     utilityViewManager()
         setUpIcon()
         
-        MovieService.sharedInstance.getPopularMovie { (results) in
-            print(results)
-        }
-
-      
+ 
     }
     
     //MARK:- Handlers

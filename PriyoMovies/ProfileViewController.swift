@@ -32,31 +32,24 @@ class ProfileViewController: UIViewController {
         
                 }
     
- 
+        let imgStr = userVM[0].img
+        let dataDecoded:NSData = NSData(base64Encoded: imgStr, options: NSData.Base64DecodingOptions(rawValue: 0))!
+        let data = Data(base64Encoded: dataDecoded as Data,options: .ignoreUnknownCharacters)
+        
+        profileLbl.text = "Profile"
+        profileImg.roundImage(image: profileImg)
+        profileImg.image = UIImage(data: data!)
+       // profileImg.image = UIImage(systemName: "person.fill")
+      //  profileBackView.backgroundColor = UtilityView.color
+        print(userName)
+        userNameLbl.text = userVM[0].name
         
         
       
     }
     
     //MARK:- Handlers
-    private func profleSetUp(){
-        
-        let imgStr = userVM[0].img
-        let dataDecoded:NSData = NSData(base64Encoded: imgStr, options: NSData.Base64DecodingOptions(rawValue: 0))!
-        let data = Data(base64Encoded: dataDecoded as Data,options: .ignoreUnknownCharacters)
-        profileImg.image = UIImage(data: data!)
-        
-         
-         profileLbl.text = "Profile"
-         profileImg.roundImage(image: profileImg)
-        userNameLbl.text = userVM[0].name
-        // profileImg.image = UIImage(systemName: "person.fill")
-       //  profileBackView.backgroundColor = UtilityView.color
-      
-        
-        
-        
-    }
+    
     
 
  

@@ -17,7 +17,7 @@ class SaveMovieService: NSObject {
     
     func openConnection(userName : String){
         
-        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("'\(userName)'.sqlite")
+        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("\(userName).sqlite")
         
         guard let url = fileUrl else {return}
         
@@ -48,7 +48,7 @@ class SaveMovieService: NSObject {
     
     func saveMovie(userName : String,title : String,img:String)->Bool{
         var registerStat : OpaquePointer?
-        let registerQuery = "INSERT INTO '\(userName)'(name,img) VALUES(?,?);"
+        let registerQuery = "INSERT INTO '\(userName)'(title,img) VALUES(?,?);"
         
         if sqlite3_prepare_v2(db, registerQuery, -1, &registerStat, nil) == SQLITE_OK{
             
@@ -68,10 +68,10 @@ class SaveMovieService: NSObject {
         
     }
     
-    func getMovie(userName : String,completion: @escaping ([SaveMovieModel])->()){
+    func getMovie(userName : String,completion: @escaping ([FavouriteMovieModel])->()){
         
         
-        var userData = [SaveMovieModel]()
+        var userData = [FavouriteMovieModel]()
         var getStat : OpaquePointer?
         let userName = userName as NSString
         
@@ -79,7 +79,7 @@ class SaveMovieService: NSObject {
         
         if sqlite3_prepare_v2(db, selectQuery, -1, &getStat, nil) == SQLITE_OK{
         
-            if sqlite3_step(getStat) == SQLITE_ROW{
+            while sqlite3_step(getStat) == SQLITE_ROW{
                 
                 let title = sqlite3_column_text(getStat, 0)
                 let img = sqlite3_column_text(getStat, 1)
@@ -88,16 +88,11 @@ class SaveMovieService: NSObject {
                 let titleStr = String(cString: title!)
                 let imgStr = String(cString: img!)
                 
-                userData.append(SaveMovieModel( title: titleStr,img: imgStr))
+                userData.append(FavouriteMovieModel( title: titleStr,img: imgStr))
                 
                 
               
-            }else{
-                return
-                
             }
-            
-            
             
         }else{
             

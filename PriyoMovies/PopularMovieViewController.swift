@@ -20,13 +20,10 @@ class PopularMovieViewController: UIViewController {
         
         MovieService.sharedInstance.getPopularMovie { (results) in
         
-            self.popularMVM = results.map({return PopularMovieViewModel(result: $0)})
+            self.popularMVM = results.map({return PopularMovieViewModel(result: $0)}) 
         }
 
-        
-       
-        
-        
+        movieCollectionView.reloadData()
        
     }
     
@@ -66,7 +63,7 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
             cell.posterImg.image = image
         }
         
-        
+      
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

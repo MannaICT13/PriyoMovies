@@ -13,9 +13,16 @@ class FavouriteTableViewCell: UITableViewCell {
     @IBOutlet weak var posterImg: UIImageView!
     
     @IBOutlet weak var titleLbl: UILabel!
+    
+    
+    var titleStr = String()
+    var img = UIImage()
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       titleLbl.text = titleStr
+        posterImg.image = img
+     
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

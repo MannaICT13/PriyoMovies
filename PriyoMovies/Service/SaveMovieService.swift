@@ -17,7 +17,7 @@ class SaveMovieService: NSObject {
     
     func openConnection(userName : String){
         
-        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("\(userName)"+".sqlite")
+        let fileUrl = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("'\(userName)'.sqlite")
         
         guard let url = fileUrl else {return}
         
@@ -34,7 +34,7 @@ class SaveMovieService: NSObject {
         
         var tableCreateStat : OpaquePointer?
         
-        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS \(userName)(title VARCHAR(100),img TEXT);"
+        let tableCreateQuery = "CREATE TABLE IF NOT EXISTS '\(userName)'(title VARCHAR(100),img TEXT);"
         
         if sqlite3_prepare_v2(db, tableCreateQuery, -1, &tableCreateStat, nil) == SQLITE_OK{
             
@@ -48,7 +48,7 @@ class SaveMovieService: NSObject {
     
     func saveMovie(userName : String,title : String,img:String)->Bool{
         var registerStat : OpaquePointer?
-        let registerQuery = "INSERT INTO \(userName)(name,img) VALUES(?,?);"
+        let registerQuery = "INSERT INTO '\(userName)'(name,img) VALUES(?,?);"
         
         if sqlite3_prepare_v2(db, registerQuery, -1, &registerStat, nil) == SQLITE_OK{
             
@@ -75,7 +75,7 @@ class SaveMovieService: NSObject {
         var getStat : OpaquePointer?
         let userName = userName as NSString
         
-        let selectQuery = "SELECT * FROM \(userName);"
+        let selectQuery = "SELECT * FROM '\(userName)';"
         
         if sqlite3_prepare_v2(db, selectQuery, -1, &getStat, nil) == SQLITE_OK{
         

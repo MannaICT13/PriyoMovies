@@ -26,6 +26,7 @@ class MovieDetailViewController: UIViewController {
     var coverImage = UIImage()
     var posterImage = UIImage()
     
+    var userName = String()
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -51,6 +52,18 @@ class MovieDetailViewController: UIViewController {
     @objc func addToFavourite(_ sender: UIBarButtonItem){
         
         navigationItem.rightBarButtonItem?.tintColor = .red
+        
+        let image = posterImg.image
+        let imageData : NSData = image!.pngData()! as NSData
+        let imageStr = imageData.base64EncodedData(options: .lineLength64Characters)
+        
+        if  SaveMovieService.sharedInstance.saveMovie(userName: userName, title: titleStr, img:imageStr.base64EncodedString() )==true{
+            print("inserted")
+        }else{
+            print("not inserted")
+            return
+        }
+        
         
     }
     

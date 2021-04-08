@@ -10,7 +10,7 @@ import UIKit
 class PopularMovieViewController: UIViewController {
 
     //MARK:- Properties
-    
+    var userName = String()
     var popularMVM = [PopularMovieViewModel]()
     var posterImg = UIImageView()
     @IBOutlet weak var movieCollectionView: UICollectionView!
@@ -56,7 +56,6 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
         
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
-        
         cell.titleLbl.text = popularMVM[indexPath.row].title
         cell.ratingLbl.text = "\(popularMVM[indexPath.row].rating)"
          
@@ -74,6 +73,7 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
         
         let DetailVC = self.storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as! MovieDetailViewController
         
+        DetailVC.userName = userName
         DetailVC.titleStr = popularMVM[indexPath.row].title
         DetailVC.ratingStr = "\(popularMVM[indexPath.row].rating)"
         DetailVC.dateStr = popularMVM[indexPath.row].releaseDate

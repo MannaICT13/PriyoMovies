@@ -307,6 +307,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="WiF-kb-TbF" id="WAr-pd-3OY"/>
+                                    <outlet property="delegate" destination="WiF-kb-TbF" id="Rgd-3U-bLJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kTo-6d-PMo"/>

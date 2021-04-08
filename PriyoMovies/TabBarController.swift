@@ -15,13 +15,19 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        SaveMovieService.sharedInstance.openConnection(userName: userName)
+        SaveMovieService.sharedInstance.createTable(userName: userName)
        // self.navigationController?.setNavigationBarHidden(true, animated: true)
         self.navigationItem.setHidesBackButton(true, animated: true)
 
         let profileTab = self.viewControllers![2] as! ProfileViewController
         profileTab.userName = userName
         
+        let favouriteTab = self.viewControllers![1] as! FavouriteViewController
+        favouriteTab.userName = userName
         
+        let popularTab = self.viewControllers![0] as! PopularMovieViewController
+        popularTab.userName = userName
         
     }
     

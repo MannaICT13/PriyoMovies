@@ -33,6 +33,7 @@
 		2A5167A4261F23E20064CBAF /* CastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5167A3261F23E20064CBAF /* CastModel.swift */; };
 		2A5167A9261F24970064CBAF /* CastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5167A8261F24970064CBAF /* CastViewModel.swift */; };
 		2A5167AE261F25AC0064CBAF /* CastService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5167AD261F25AC0064CBAF /* CastService.swift */; };
+		2A5167BA261F62DB0064CBAF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2A5167B9261F62DB0064CBAF /* IQKeyboardManagerSwift */; };
 		2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F02261DEDE6001E3169 /* MovieService.swift */; };
 		2A5B3F0D261DFBCC001E3169 /* PopularMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F0C261DFBCC001E3169 /* PopularMovieViewController.swift */; };
 		2A5B3F12261E001E001E3169 /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */; };
@@ -110,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A5167BA261F62DB0064CBAF /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +291,9 @@
 			dependencies = (
 			);
 			name = PriyoMovies;
+			packageProductDependencies = (
+				2A5167B9261F62DB0064CBAF /* IQKeyboardManagerSwift */,
+			);
 			productName = PriyoMovies;
 			productReference = 2A314E46261C808200FFD92E /* PriyoMovies.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 2A314E3D261C808200FFD92E;
+			packageReferences = (
+				2A5167B8261F62DB0064CBAF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 2A314E47261C808200FFD92E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -759,6 +767,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A5167B8261F62DB0064CBAF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A5167B9261F62DB0064CBAF /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A5167B8261F62DB0064CBAF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A314E3E261C808200FFD92E /* Project object */;
 }

@@ -49,10 +49,26 @@ class MovieDetailViewController: UIViewController {
         print(movie_id)
         CastService.sharedInstance.loadCastData(movie_id: movie_id) { (cast) in
             self.castVM = cast.map({return CastViewModel(result: $0)})
+          
             
         }
+        self.castCollectionView.reloadData()
       
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+        CastService.sharedInstance.loadCastData(movie_id: movie_id) { (cast) in
+            self.castVM = cast.map({return CastViewModel(result: $0)})
+          
+            
+        }
+        self.castCollectionView.reloadData()
+
+        
+    }
+   
     
     func addFavourite(){
         

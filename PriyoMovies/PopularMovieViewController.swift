@@ -22,19 +22,14 @@ class PopularMovieViewController: UIViewController {
         MovieService.sharedInstance.getPopularMovie { (results) in
         
             self.popularMVM = results.map({return PopularMovieViewModel(result: $0)})
+            
         }
-        movieCollectionView.reloadData()
+        
+        self.movieCollectionView.reloadData()
+       
     }
     
     //MARK:- Handlers
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        
-
-        
-    }
-   
 
    
 }

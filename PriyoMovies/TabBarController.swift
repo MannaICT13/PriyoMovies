@@ -11,6 +11,7 @@ class TabBarController: UITabBarController {
 
     var userName = String()
     var userVM = [UserViewModel]()
+    var popularMVM = [PopularMovieViewModel]()
     
     override func viewDidLoad() {
         
@@ -29,9 +30,20 @@ class TabBarController: UITabBarController {
         let popularTab = self.viewControllers![0] as! PopularMovieViewController
         popularTab.userName = userName
         
+        MovieService.sharedInstance.getPopularMovie { (results) in
+        
+            self.popularMVM = results.map({return PopularMovieViewModel(result: $0)})
+            
+        }
+
+        
+        
+        
+        
     }
     
-
+    
+   
    
 
 }

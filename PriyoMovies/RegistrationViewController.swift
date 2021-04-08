@@ -42,20 +42,24 @@ class RegistrationViewController: UIViewController {
         guard let name = nameTextField.text else {return}
         guard let userName = userNameTextField.text else {return}
         guard let password = passwordTextField.text else {return}
-        guard userImageView.image != nil else {return}
+        guard  userImageView.image != nil else {return}
        
         let image = userImageView.image 
         let imageData : NSData = image!.pngData()! as NSData
         let imageStr = imageData.base64EncodedData(options: .lineLength64Characters)
         
         if name == "" || userName == "" || password == "" {
-            showAlert(msg:  "Registration Failed!")
+            showAlert(title: "Error Message", msg:  "Registration Failed!")
         
         }else{
             if   UserService.shareInstance.registerUser(name: name, userName: userName, password: password, img: imageStr.base64EncodedString()) == true{
-                showAlert(msg: "Registration Successfull!")
+                showAlert(title: "Success Message", msg: "Registration Successfull!")
+                nameTextField.text?.removeAll()
+                userNameTextField.text?.removeAll()
+                passwordTextField.text?.removeAll()
+                userImageView.image = nil
           }else{
-            showAlert(msg: "Registration Failed! or already Registered")
+            showAlert(title: "Error Message", msg: "Registration Failed! or already Registered")
             return
           }
             
@@ -63,7 +67,7 @@ class RegistrationViewController: UIViewController {
         }
     
         
-        
+  
         
         
         

@@ -25,6 +25,8 @@
 		2A314EC0261D01C100FFD92E /* UserLoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */; };
 		2A314EC5261D100E00FFD92E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC4261D100E00FFD92E /* TabBarController.swift */; };
 		2A314ECA261D28D100FFD92E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A314EC9261D28D100FFD92E /* ProfileViewController.swift */; };
+		2A51678B261EFEBD0064CBAF /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51678A261EFEBD0064CBAF /* FavouriteViewController.swift */; };
+		2A516790261F04960064CBAF /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A51678F261F04960064CBAF /* FavouriteTableViewCell.swift */; };
 		2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F02261DEDE6001E3169 /* MovieService.swift */; };
 		2A5B3F0D261DFBCC001E3169 /* PopularMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F0C261DFBCC001E3169 /* PopularMovieViewController.swift */; };
 		2A5B3F12261E001E001E3169 /* PopularMovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */; };
@@ -78,6 +80,8 @@
 		2A314EBF261D01C100FFD92E /* UserLoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLoginViewModel.swift; sourceTree = "<group>"; };
 		2A314EC4261D100E00FFD92E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2A314EC9261D28D100FFD92E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2A51678A261EFEBD0064CBAF /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
+		2A51678F261F04960064CBAF /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
 		2A5B3F02261DEDE6001E3169 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		2A5B3F0C261DFBCC001E3169 /* PopularMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieViewController.swift; sourceTree = "<group>"; };
 		2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				2A314EC9261D28D100FFD92E /* ProfileViewController.swift */,
 				2A5B3F0C261DFBCC001E3169 /* PopularMovieViewController.swift */,
 				2A5B3F27261E687C001E3169 /* MovieDetailViewController.swift */,
+				2A51678A261EFEBD0064CBAF /* FavouriteViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			children = (
 				2A314E91261C874E00FFD92E /* UtilityView.swift */,
 				2A5B3F11261E001E001E3169 /* PopularMovieCollectionViewCell.swift */,
+				2A51678F261F04960064CBAF /* FavouriteTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,10 +392,12 @@
 				2A314E8D261C82C400FFD92E /* LoginViewController.swift in Sources */,
 				2A314EB1261CE09B00FFD92E /* UserModel.swift in Sources */,
 				2A314E4A261C808200FFD92E /* AppDelegate.swift in Sources */,
+				2A516790261F04960064CBAF /* FavouriteTableViewCell.swift in Sources */,
 				2A314E4C261C808200FFD92E /* SceneDelegate.swift in Sources */,
 				2A5B3F37261E74BF001E3169 /* SaveMovieViewModel.swift in Sources */,
 				2A5B3F1D261E38D4001E3169 /* PopularMovieViewModel.swift in Sources */,
 				2A5B3F2D261E743A001E3169 /* SaveMovieService.swift in Sources */,
+				2A51678B261EFEBD0064CBAF /* FavouriteViewController.swift in Sources */,
 				2A314E9C261C9E6400FFD92E /* Extension.swift in Sources */,
 				2A5B3F03261DEDE6001E3169 /* MovieService.swift in Sources */,
 				2A314E92261C874E00FFD92E /* UtilityView.swift in Sources */,

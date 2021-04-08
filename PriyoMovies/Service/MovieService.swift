@@ -19,6 +19,7 @@ class MovieService: NSObject {
     func getPopularMovie(completion: @escaping ([PopularMovieModel])->()){
         
         var resultData = [PopularMovieModel]()
+        
         let apiKey = "3fa9058382669f72dcb18fb405b7a831"
         let urlSring = "http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&page=1&api_key=\(apiKey)"
         
@@ -44,7 +45,6 @@ class MovieService: NSObject {
         
                         resultData.append(PopularMovieModel(id: result.id, coverPhoto: result.coverPhoto, poster: result.poster, title: result.title, summary: result.summary, rating: result.rating, releaseDate: result.releaseDate))
                     }
-                    completion(resultData)
                   
                 
                 }catch let jsonError as NSError{
@@ -58,7 +58,8 @@ class MovieService: NSObject {
             
         }
         task.resume()
-       
+        
+        completion(resultData)
     }
 
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CastModel: NSObject {
+class CastModel: Decodable {
  
     let name:String
     let img :String
@@ -22,4 +22,14 @@ class CastModel: NSObject {
         case name
         case img = "profile_path"
     }
+}
+class CastResultModel : Decodable{
+    
+    let cast : [CastModel]
+    init(result : [CastModel]){
+        
+        self.cast = result
+    }
+    
+    
 }

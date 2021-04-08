@@ -16,6 +16,7 @@ class UtilityView {
     static let cgColor : CGColor = CGColor(red: 28/255, green: 135/255, blue: 183/255, alpha: 1.0)
     
     
+    
     //MARK:- Handlers
     
     static func roundFillButton(button : UIButton){
@@ -52,7 +53,6 @@ class UtilityView {
         textField.borderStyle = .none
         textField.layer.addSublayer(buttomLine)
     }
-    
     
     
     

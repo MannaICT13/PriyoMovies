@@ -367,6 +367,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstItem="DDQ-ZB-tto" firstAttribute="leading" secondItem="2o5-Np-fCv" secondAttribute="leading" constant="20" id="03M-hR-XrX"/>
                                     <constraint firstAttribute="trailing" secondItem="ANv-1o-zgy" secondAttribute="trailing" id="AHf-rY-D0S"/>
@@ -476,45 +477,43 @@
                                 <rect key="frame" x="0.0" y="418" width="414" height="444"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4sm-xx-fqW">
-                                    <size key="itemSize" width="130" height="139"/>
+                                    <size key="itemSize" width="198" height="234"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="yKH-s5-9u6" customClass="CastCollectionViewCell" customModule="PriyoMovies" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="139"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="castCell" id="yKH-s5-9u6" customClass="CastCollectionViewCell" customModule="PriyoMovies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="198" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kY0-4I-nhw">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="139"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mpB-Zg-DmZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="234"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ZV-O2-Qud">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="90"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="90" id="Tub-K8-UqS"/>
-                                                    </constraints>
+                                                    <rect key="frame" x="0.0" y="0.0" width="198" height="234"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duy-b9-Xs5">
-                                                    <rect key="frame" x="0.0" y="95" width="130" height="14.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yt2-Ui-nYb">
+                                                    <rect key="frame" x="20" y="224" width="158" height="10"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="8"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="duy-b9-Xs5" firstAttribute="leading" secondItem="kY0-4I-nhw" secondAttribute="leading" id="M3i-FW-rf1"/>
-                                                <constraint firstAttribute="trailing" secondItem="duy-b9-Xs5" secondAttribute="trailing" id="Qam-aq-ySJ"/>
-                                                <constraint firstItem="duy-b9-Xs5" firstAttribute="top" secondItem="6ZV-O2-Qud" secondAttribute="bottom" constant="5" id="W7b-Ne-S75"/>
-                                                <constraint firstItem="6ZV-O2-Qud" firstAttribute="leading" secondItem="kY0-4I-nhw" secondAttribute="leading" id="dCi-Vc-ajr"/>
-                                                <constraint firstAttribute="trailing" secondItem="6ZV-O2-Qud" secondAttribute="trailing" id="dQi-6R-4mw"/>
-                                                <constraint firstItem="6ZV-O2-Qud" firstAttribute="top" secondItem="kY0-4I-nhw" secondAttribute="top" id="vyY-j0-O0i"/>
+                                                <constraint firstAttribute="bottom" secondItem="yt2-Ui-nYb" secondAttribute="bottom" id="DjN-gO-jmE"/>
+                                                <constraint firstAttribute="trailing" secondItem="6ZV-O2-Qud" secondAttribute="trailing" id="EJK-2G-1QK"/>
+                                                <constraint firstItem="6ZV-O2-Qud" firstAttribute="top" secondItem="mpB-Zg-DmZ" secondAttribute="top" id="JK7-fy-v0R"/>
+                                                <constraint firstItem="6ZV-O2-Qud" firstAttribute="leading" secondItem="mpB-Zg-DmZ" secondAttribute="leading" id="L6k-gQ-ilY"/>
+                                                <constraint firstItem="yt2-Ui-nYb" firstAttribute="leading" secondItem="mpB-Zg-DmZ" secondAttribute="leading" constant="20" id="bSu-Db-leJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="yt2-Ui-nYb" secondAttribute="trailing" constant="20" id="cub-Gu-2kU"/>
+                                                <constraint firstAttribute="bottom" secondItem="6ZV-O2-Qud" secondAttribute="bottom" id="srf-f4-GnR"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="130" height="139"/>
+                                        <size key="customSize" width="198" height="234"/>
                                         <connections>
                                             <outlet property="castImg" destination="6ZV-O2-Qud" id="jSD-q3-Pft"/>
-                                            <outlet property="castName" destination="duy-b9-Xs5" id="uqG-tn-kr3"/>
+                                            <outlet property="castName" destination="yt2-Ui-nYb" id="dxx-xT-kEB"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -703,6 +702,9 @@
         <image name="tv.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

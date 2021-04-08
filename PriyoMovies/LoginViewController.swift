@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
       
       
         }else{
-            print("Faild")
+           showAlert(msg: "Wrong UserName or password!")
         }
         
     }

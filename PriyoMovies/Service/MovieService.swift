@@ -45,8 +45,8 @@ class MovieService: NSObject {
         
                         resultData.append(PopularMovieModel(id: result.id, coverPhoto: result.coverPhoto, poster: result.poster, title: result.title, summary: result.summary, rating: result.rating, releaseDate: result.releaseDate))
                     }
-                  
-                
+                    completion(resultData)
+                    
                 }catch let jsonError as NSError{
                     print(jsonError.localizedDescription)
                 }
@@ -59,7 +59,7 @@ class MovieService: NSObject {
         }
         task.resume()
         
-        completion(resultData)
+       
     }
 
     

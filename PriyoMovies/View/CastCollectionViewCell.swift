@@ -12,6 +12,9 @@ class CastCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var castImg: UIImageView!
     
     @IBOutlet weak var castName: UILabel!
-    
+
+    override  func awakeFromNib() {
+        
+    }
     
 }

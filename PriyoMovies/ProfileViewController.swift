@@ -39,10 +39,11 @@ class ProfileViewController: UIViewController {
         profileLbl.text = "Profile"
         profileImg.roundImage(image: profileImg)
         profileImg.image = UIImage(data: data!)
-       // profileImg.image = UIImage(systemName: "person.fill")
-      //  profileBackView.backgroundColor = UtilityView.color
-        print(userName)
+    
+        profileBackView.backgroundColor = .systemRed
         userNameLbl.text = userVM[0].name
+        profileBackView.layer.cornerRadius = 20.0
+        profileBackView.clipsToBounds = true
         
         
       

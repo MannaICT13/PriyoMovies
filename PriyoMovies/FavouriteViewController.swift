@@ -59,7 +59,7 @@ extension FavouriteViewController : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = favouriteTableView.dequeueReusableCell(withIdentifier: "cell") as! FavouriteTableViewCell
+        let cell = self.favouriteTableView.dequeueReusableCell(withIdentifier: "cell") as! FavouriteTableViewCell
       
         let imgStr = favouriteMVM[indexPath.row].img
         let dataDecoded:NSData = NSData(base64Encoded: imgStr, options: NSData.Base64DecodingOptions(rawValue: 0))!

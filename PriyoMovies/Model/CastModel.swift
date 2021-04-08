@@ -17,15 +17,15 @@ class CastModel: Decodable {
         self.img = img
     }
     
-    enum CodingKeys : String,CodingKey{
+    private enum CodingKeys : String,CodingKey{
         
-        case name
+        case name = "original_name"
         case img = "profile_path"
     }
 }
 class CastResultModel : Decodable{
     
-    let cast : [CastModel]
+    var cast = [CastModel]()
     init(result : [CastModel]){
         
         self.cast = result

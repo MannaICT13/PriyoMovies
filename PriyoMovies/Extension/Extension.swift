@@ -21,3 +21,18 @@ extension UIImageView{
     
     
 }
+extension UIViewController{
+    
+    func showAlert(msg:String){
+        
+        let alert = UIAlertController(title: "Error Message", message: msg, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alert.addAction(ok)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
+}

@@ -20,6 +20,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var summaryLbl: UILabel!
     
     @IBOutlet weak var castCollectionView: UICollectionView!
+    
     var titleStr = String()
     var ratingStr = String()
     var dateStr = String()
@@ -28,6 +29,12 @@ class MovieDetailViewController: UIViewController {
     var posterImage = UIImage()
     
     var userName = String()
+    
+    var movie_id = String()
+    
+    var castVM = [CastViewModel]()
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -38,10 +45,14 @@ class MovieDetailViewController: UIViewController {
         summaryLbl.text = summaryStr
         coverPhotoImg.image = posterImage
         posterImg.image = posterImage
-
+        
+        print(movie_id)
+        CastService.sharedInstance.loadCastData(movie_id: movie_id) { (cast) in
+            self.castVM = cast.map({return CastViewModel(result: $0)})
+            
+        }
       
     }
-    
     
     func addFavourite(){
         
@@ -49,6 +60,7 @@ class MovieDetailViewController: UIViewController {
         
         
     }
+    
     
     @objc func addToFavourite(_ sender: UIBarButtonItem){
         
@@ -74,15 +86,26 @@ class MovieDetailViewController: UIViewController {
 extension MovieDetailViewController: UICollectionViewDelegate,UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        <#code#>
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return castVM.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        let cell = self.castCollectionView.dequeueReusableCell(withReuseIdentifier: "castCell", for: indexPath) as! CastCollectionViewCell
+   
+        cell.layer.cornerRadius = 3
+        cell.layer.masksToBounds = true
+        cell.castName.text = castVM[indexPath.row].name
+        let poster = castVM[indexPath.row].img
+        
+        if let img = getImage(from: poster){
+            cell.castImg.image = img
+        }
+        return cell
     }
     
     
@@ -96,12 +119,10 @@ extension MovieDetailViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let collectionViewWidth = castCollectionView.frame.width
-        
+       
         return CGSize(width: collectionViewWidth/4-1, height: collectionViewWidth/4)
-        
-        
     }
-   
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
@@ -109,5 +130,33 @@ extension MovieDetailViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2
     }
+    
+}
+extension MovieDetailViewController{
+    
+    func getImage(from string: String) -> UIImage? {
+        let  urlString = "https://image.tmdb.org/t/p/w300" + string
+        
+        guard let url = URL(string: urlString)
+            else {
+                print("Unable to create URL")
+                return nil
+        }
+
+        var image: UIImage? = nil
+        do {
+          
+            let data = try Data(contentsOf: url, options: [])
+
+           
+            image = UIImage(data: data)
+        }
+        catch {
+            print(error.localizedDescription)
+        }
+
+        return image
+    }
+    
     
 }

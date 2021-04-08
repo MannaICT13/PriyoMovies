@@ -13,6 +13,7 @@ class PopularMovieViewController: UIViewController {
     var userName = String()
     var popularMVM = [PopularMovieViewModel]()
     var posterImg = UIImageView()
+    
     @IBOutlet weak var movieCollectionView: UICollectionView!
     //MARK:- Init
     override func viewDidLoad() {
@@ -20,16 +21,19 @@ class PopularMovieViewController: UIViewController {
         
         MovieService.sharedInstance.getPopularMovie { (results) in
         
-            self.popularMVM = results.map({return PopularMovieViewModel(result: $0)}) 
+            self.popularMVM = results.map({return PopularMovieViewModel(result: $0)})
         }
-
         movieCollectionView.reloadData()
-       
     }
     
     //MARK:- Handlers
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+
+        
+    }
    
 
    
@@ -62,15 +66,15 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
         if let image = getImage(from: poster) {
             cell.posterImg.image = image
         }
-        
-      
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        
         let DetailVC = self.storyboard?.instantiateViewController(identifier: "MovieDetailViewController") as! MovieDetailViewController
         
         DetailVC.userName = userName
+        DetailVC.movie_id = "\(popularMVM[indexPath.row].id)"
         DetailVC.titleStr = popularMVM[indexPath.row].title
         DetailVC.ratingStr = "\(popularMVM[indexPath.row].rating)"
         DetailVC.dateStr = popularMVM[indexPath.row].releaseDate
@@ -86,12 +90,9 @@ extension PopularMovieViewController : UICollectionViewDelegate,UICollectionView
         if let posterImg = getImage(from: poster){
             DetailVC.posterImage = posterImg
         }
+       
         
-        
-    
         self.navigationController?.pushViewController(DetailVC, animated: true)
-        
-        
         
     }
 

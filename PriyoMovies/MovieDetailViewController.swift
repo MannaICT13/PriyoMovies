@@ -19,6 +19,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var summaryLbl: UILabel!
     
+    @IBOutlet weak var castCollectionView: UICollectionView!
     var titleStr = String()
     var ratingStr = String()
     var dateStr = String()
@@ -69,4 +70,44 @@ class MovieDetailViewController: UIViewController {
     
 
   
+}
+extension MovieDetailViewController: UICollectionViewDelegate,UICollectionViewDataSource{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+    
+    
+    
+}
+
+extension MovieDetailViewController : UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let collectionViewWidth = castCollectionView.frame.width
+        
+        return CGSize(width: collectionViewWidth/4-1, height: collectionViewWidth/4)
+        
+        
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+    
 }

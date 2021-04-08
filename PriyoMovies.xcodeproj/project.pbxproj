@@ -162,7 +162,6 @@
 				2A314E87261C824100FFD92E /* Storyboard */,
 				2A314EA7261CE03400FFD92E /* Service */,
 				2A314E86261C821F00FFD92E /* Extension */,
-				2A314E85261C81F900FFD92E /* StringConstant */,
 				2A314E49261C808200FFD92E /* AppDelegate.swift */,
 				2A314E4B261C808200FFD92E /* SceneDelegate.swift */,
 				2A314E52261C808400FFD92E /* Assets.xcassets */,
@@ -187,13 +186,6 @@
 				2A314E6D261C808400FFD92E /* Info.plist */,
 			);
 			path = PriyoMoviesUITests;
-			sourceTree = "<group>";
-		};
-		2A314E85261C81F900FFD92E /* StringConstant */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = StringConstant;
 			sourceTree = "<group>";
 		};
 		2A314E86261C821F00FFD92E /* Extension */ = {

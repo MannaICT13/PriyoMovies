@@ -16,6 +16,7 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         SaveMovieService.sharedInstance.openConnection(userName: userName)
         SaveMovieService.sharedInstance.createTable(userName: userName)
        // self.navigationController?.setNavigationBarHidden(true, animated: true)

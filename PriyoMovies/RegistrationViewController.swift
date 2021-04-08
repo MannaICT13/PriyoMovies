@@ -54,6 +54,7 @@ class RegistrationViewController: UIViewController {
         }else{
             if   UserService.shareInstance.registerUser(name: name, userName: userName, password: password, img: imageStr.base64EncodedString()) == true{
                 showAlert(title: "Success Message", msg: "Registration Successfull!")
+                
                 nameTextField.text?.removeAll()
                 userNameTextField.text?.removeAll()
                 passwordTextField.text?.removeAll()

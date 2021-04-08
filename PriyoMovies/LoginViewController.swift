@@ -59,6 +59,8 @@ class LoginViewController: UIViewController {
         }else{
             showAlert(title: "Error Message", msg: "Wrong UserName or password!")
         }
+        userNameTextField.text?.removeAll()
+        passwordTextField.text?.removeAll()
         
     }
     
